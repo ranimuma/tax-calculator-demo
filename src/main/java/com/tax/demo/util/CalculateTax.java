@@ -10,7 +10,6 @@ public class CalculateTax {
 	  public static double getTotalSalary(Date dateOfJoining, Double salaryPerMonth, int lopdays) {
 		 	LocalDate joiningDate = dateOfJoining.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 		 	
-		 	System.out.println("joiningDate::"+joiningDate);
 			int fyEndYear = LocalDate.now().getYear();
 	        // Calculate number of months between joining and end date
 
