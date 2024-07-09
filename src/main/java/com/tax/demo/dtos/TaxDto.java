@@ -15,7 +15,7 @@ public class TaxDto {
 
 	private Date doj;
 
-	private Long salaryYearly;
+	private Double salaryYearly;
 	
 	private Double taxAmount;
 	
@@ -53,11 +53,11 @@ public class TaxDto {
 		this.doj = doj;
 	}
 
-	public Long getSalaryYearly() {
+	public Double getSalaryYearly() {
 		return salaryYearly;
 	}
 
-	public void setSalaryYearly(Long salaryYearly) {
+	public void setSalaryYearly(Double salaryYearly) {
 		this.salaryYearly = salaryYearly;
 	}
 

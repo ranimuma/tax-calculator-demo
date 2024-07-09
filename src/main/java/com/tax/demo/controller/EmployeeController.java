@@ -1,5 +1,7 @@
 package com.tax.demo.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -26,7 +28,8 @@ public class EmployeeController {
 		try {
 			return new ResponseEntity<EmployeeDto>(employeeService.create(employeeDto), HttpStatus.CREATED);
 		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+//			ResponseEntity.of( Optional.of(null)).status(HttpStatus.BAD_REQUEST)
+			throw new RuntimeException(e.getMessage());
 		}
 	}
 

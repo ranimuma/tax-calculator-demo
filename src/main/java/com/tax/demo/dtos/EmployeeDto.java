@@ -38,11 +38,10 @@ public class EmployeeDto {
 	@NotEmpty(message = "Phone Number cannot be empty")
 	private List<String> phoneNumber;
 
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-mm-yyyy")
 	private Date doj;
 
-	@Min(value = 0L, message = "The value must be positive")
-	private Long salary;
+	@Min(value =0, message = "The value must be positive")
+	private Double salary;
 	
 	
 }

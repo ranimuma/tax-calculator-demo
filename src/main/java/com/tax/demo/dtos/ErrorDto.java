@@ -4,21 +4,31 @@ import java.util.Map;
 
 import lombok.Data;
 
-@Data
+
 public class ErrorDto {
+    private String message;
+    private String details;
 
+    // Constructors, getters, and setters
+    
+    public ErrorDto(String message, String details) {
+        this.message = message;
+        this.details = details;
+    }
 
+    public String getMessage() {
+        return message;
+    }
 
-	private int statusCode;
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
-	private String statusMessage;
+    public String getDetails() {
+        return details;
+    }
 
-	private Long id;
-
-	private Map<String, String> fieldResponse;
-
-
+    public void setDetails(String details) {
+        this.details = details;
+    }
 }
-
-	
-

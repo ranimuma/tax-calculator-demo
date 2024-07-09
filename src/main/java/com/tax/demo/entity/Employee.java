@@ -23,7 +23,7 @@ import lombok.ToString;
 public class Employee {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 
 	@Column(unique = true)
@@ -45,7 +45,7 @@ public class Employee {
 	private Date doj;
 
 	@Column
-	private Long salary;
+	private Double salary;
 
 	@CreationTimestamp
 	@Column(name = "created_at", nullable = false, updatable = false)
